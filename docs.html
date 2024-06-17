@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Guide</title>
+        <style>
+            .navbar {
+                position: fixed;
+                top: 0;
+                width:100%;
+                left: 0;
+                background-color: White;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px 30px;
+                z-index: 1000;
+                box-shadow: 0 0 2px var(--grey-color-light);
+            }
+            .logo_item {
+                display: flex;
+                align-items: flex-start; 
+                column-gap: 10px;
+                font-size: 22px;
+                font-weight: 500;
+                margin-bottom: 0px;
+                color: orangered;
+            }
+
+            #head{
+            display:block;   
+            } 
+            #head h2{
+            margin-bottom: 0; 
+            font-size: 25px;
+            } 
+            #head p{
+            margin-top: 0; 
+            color:black;
+            font-size: 10px;
+            } 
+
+
+            .navbar img {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+            }
+
+            .navbar_content {
+                display: flex;
+                align-items: center;
+                column-gap: 35px;
+                margin-right:100px;
+            }
+            .navbar_content img{
+                width:30px;
+                height:30px;
+                border-radius:30px;
+                float:right;
+            }
+            .navbar_content button{
+                background: linear-gradient(orangered,pink);
+                box-sizing:border-box;
+                box-shadow:inset 3px 3px 3px 3px rgb(219, 138, 138);
+                padding:10px 20px;
+                color:antiquewhite;
+                font-weight: bold;
+                border-radius: 30px;
+                border:none;
+            }
+            .navbar_content button:hover{
+                background: linear-gradient(rgb(42, 174, 230),rgb(142, 236, 231));
+                box-sizing:border-box;
+                box-shadow:inset 3px 3px 3px 3px rgb(189, 200, 234);
+                color:black;
+            }
+            
+            #content{
+                background-color:rgba(241, 187, 167, 0.799) ;
+                margin-top:0;
+                padding:10px 0 20px 0;
+                padding-top:10px;
+            }
+            .container{
+                background-color:white;
+                margin:150px 50px 0px 50px;
+                padding:20px 10px ;
+                position: relative;
+                border:3px solid orangered;
+                
+            }
+            .container h2{
+                color:blanchedalmond;
+                text-align: center;
+                background-color: black;
+                padding:30px;
+                border-radius:50px;
+            }
+            h4{
+                color:rgb(234, 88, 52);
+                font-size:25px;
+            }
+            .container p{
+                background-color: antiquewhite;
+                color:black;
+                font-size:20px;
+                padding:20px;
+                border-radius:50px;
+                padding:40px;
+            }
+            i{
+                color:orangered;
+                font-weight: bold;
+            }
+            
+            #steps ol{
+            background-color: rgb(253, 251, 249);
+            border:3px solid orangered;
+            padding:40px;
+            box-sizing: border-box;
+            border-radius:40px;
+            margin:20px;
+            }
+            #steps ol li{
+                font-size:18px;
+                color:black;
+                padding:8px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo_item">
+                <img src="logo-no-background.png" alt="">
+                <div id="head">
+                    <h2>Prejudice Tracker</h2>
+                    <p>Detection to correction: fight against prejudice</p>
+                </div>
+            </div>
+          
+              <div class="navbar_content">
+                
+                  <a href="home.html"><button type="button">Home</button></a>
+              </div>
+           </nav>
+        
+        <div id="content">
+            <div class="container">
+                <h2>Using Prejudice Tracker: A User Guide</h2>
+                <p>
+                    Welcome to Prejudice Tracker! This platform is designed to empower you to report and address incidents of prejudice 
+                    and discrimination in your community. Whether you've personally experienced prejudice or witnessed it happening to others, 
+                    your participation is crucial in creating a more inclusive and just society.
+                </p>
+                <p>If You are looking for guidance to use <i>'Prejudice Tracker'</i>, Follow the given steps below to understand how to use 'Prejudice Tracker'.</p>
+                <div id="steps">
+                    
+                    <ol>
+                        <h4>Follow the steps below for creating new acccount:</h4>
+                        <li>If You are new to Prejudice Tracker and want to report an incident, then First of all, You have to sign up for an account. </li>
+                        <li>To sign up for an account, you have to go to login page by clicking on the 'LOGIN' button on the navigation bar. </li>
+                        <li>After clicking on the 'LOGIN' button, a LOGIN webpage will open, into the login page, click on the 'SIGN UP' button, it will open the sign up page. </li>
+                        <li>Now You can fill your credentials needed and create an account.</li>
+                    </ol>
+                    
+                    <ol>
+                        <h4>Follow the steps below for Reporting an incident: </h4>
+                        <li>In order to 'report an incident', user needs to be logged into their account first,if they already have an account.Otherwise sign up for an account first, then login.</li>
+                        <li>User can login by using the login page which opens on clicking on the login button on the navigation bar. </li>
+                        <li>Once the user have succesfully logged into their account, they can navigate to the 'Report Incident' Section of the home page with the navigation menu.</li>
+                        <li>In the Report Incident Section, User can directly click on the 'Report an Incident' button. It opens the incident reporting form.</li>
+                        <li>Into the Reporting form,user can choose to report anonymously as well as by using their personal information as per the credentials needed.</li>
+                        <li>In order to report anonymously, Click on the button 'Report anonymously'.</li>
+                        <li>Now fill all the credentials needed for reporting into the form.</li>
+                        <li>After filling all the details,click on the submit button.Your incident is reported succesfully. </li>
+                    </ol>
+                    <ol>
+                        <h4>Follow the steps below to view the reported icidents and suggestion added to them: </h4>
+    
+                        <li>In Order to see the reported incidents, You can directly click on the 'History' button on the navigation menu. It takes you to the Services section. </li>
+                        <li>In the services section click on the button 'View incident history'. It opens the Incident History Webpage.</li>
+                        <li>You can click on the filter toggle icon to display filters.</li>
+                        <li>On clicking any filters, you can see the related data only on the content section of the page. </li>
+                        <li>If you want to see all the details of any particular incident, click on the incident box for details.</li>
+                    </ol>
+                    <ol>
+                        <h4>Follow the steps below to view the reported incidents and add suggestions: </h4>
+    
+                        <li>User must have an account for giving any suggestion. If User already have an account, they must be logged in first.</li>
+                        <li>After logging into their account, they can directly go the Incident History Page through navigation menu, and click on the particular incident, user wants to add suggestion to. </li>
+                        <li>After clicking on the incident box, A new page opens containing all the details of the incidents as well as the suggestions added to them. </li>
+                        <li>In case, the user has still not logged into their account and have already incident details page, then before adding any suggestions use the login button on the header section to login first.  </li>
+                        <li>There is suggestion box within the incident details page. You can directly type your suggestion in the input area.</li>
+                        <li>After entering the suggestions, 'Add suggestion' button must be clicked for saving the suggestions.</li>
+                    </ol>
+                    <ol>
+                        <h4>Follow the steps below to view the Educational Resources and Medium To file a legal complaint for taking legal actions : </h4>
+    
+                        <li>Through naviagtion menu, click on the 'DOCS' button.</li>
+                        <li>Now it will take you to the services section of the homepage, Now click on the 'VIEW RESOURCES' button.</li>
+                        <li>It takes you to the resources page. There you can easily find your rights and medium to file complaints. There are legal site links provided within the page according to the nature of prejudice.</li>
+                        <li>You can click on the images to go to the legal websites for the particular type of prejudice.                         It directly takes you to the legal websites.
+                        </li>
+                    </ol>
+                </div>
+    
+            </div>
+        </div>
+        
+    </body>
+</html>

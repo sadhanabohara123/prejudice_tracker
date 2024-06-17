@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <style>
+.content{
+    width:90%;
+    margin: 80px auto 30px;
+    border: 1px solid orangered;
+    margin-top:100px;
+}
+.content .main-content{
+    width:100%;
+    float: left;
+    border:orangered;
+}
+.content .main-content  .recent-post{
+    margin: 20px;
+}
+.content .main-content .post{
+    width:95%;
+    height: 1000px;
+    margin: 10px auto;
+    border-radius: 5px;
+    background: #fff;
+}
+.content.main-content .post .post-image{
+    width: 95%;
+    height: 100%;
+    float: left;
+}
+
+a{
+    text-decoration: none;
+}
+.clearfix::after{
+    content: '';
+    display: block;
+    clear:both;
+}
+h1{
+    color:aliceblue;
+    background-color: #FF4500;
+    font-size: 50px;
+}
+.content .main-content .post .post-preview{
+    width:100%;
+    padding: 10px;
+}
+.btn read-more{
+    padding: .7rem 1rem;
+    background: #FF4500;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    position: absolute;
+}
+.btn:hover{
+    color:#fff !important;
+    background: #FF4500;
+}
+.content .main-content .post{
+    position: relative;
+}
+.content .main-content .post .read-more{
+    position: absolute;
+    bottom: 10px;
+    right:10px;
+    border: 1px solid #FF4500;
+    background: transparent;
+    border-radius: 0px;
+    color: #FF4500 !important;
+}
+.content .main-content .post .read-more:hover{
+    background: #FF4500;
+    color:#fff !important;
+    transition: .25s;
+}
+        /* Import Google font - Poppins */
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  :root {
+    --white-color: #fff;
+    --blue-color: #4070f4;
+    --grey-color: #707070;
+    --grey-color-light: #aaa;
+  }
+  body {
+    background-color: #e7f2fd;
+  
+    transition: all 0.5s ease;
+  }
+  body.dark {
+    background-color: #333;
+  }
+  body.dark {
+    --white-color: #333;
+    --blue-color: #fff;
+    --grey-color: #f2f2f2;
+    --grey-color-light: #aaa;
+  }
+  
+  /* navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    z-index: 1000;
+    box-shadow: 0 0 2px var(--grey-color-light);
+  }
+  .logo_item {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 22px;
+    font-weight: 500;
+    color:orangered;
+  }
+  .navbar img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+  .logo_item img{
+    width:65px;
+    height:65px;
+  }
+  #head{
+  display:block;
+      
+} 
+#head h2{
+  margin-bottom: 0; 
+  font-size: 25px;
+} 
+#head p{
+  margin-top: 0; 
+  color:black;
+  font-size: 10px;
+} 
+
+  
+  .search_bar {
+    height: 47px;
+    max-width: 430px;
+    width: 100%;
+  }
+  .search_bar input {
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    font-size: 18px;
+    outline: none;
+    background-color: var(--white-color);
+    color: var(--grey-color);
+    border: 1px solid var(--grey-color-light);
+    padding: 0 20px;
+  }
+  .navbar_content {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+  }
+  .navbar_content i {
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--grey-color);
+  }
+  .navbar_content button{
+    background: linear-gradient(orangered,pink);
+    box-sizing:border-box;
+    box-shadow:inset 3px 3px 3px 3px rgb(219, 138, 138);
+    padding:10px 20px;
+    color:antiquewhite;
+    font-weight: bold;
+    border-radius: 30px;
+    border:none;
+  }
+  .navbar_content button:hover{
+    background: linear-gradient(rgb(42, 174, 230),rgb(142, 236, 231));
+    box-sizing:border-box;
+    box-shadow:inset 3px 3px 3px 3px rgb(189, 200, 234);
+    color:black;
+  }
+ 
+
+  @media screen and (max-width: 768px) {
+  
+    .search_bar {
+      display: none;
+    }
+  
+  }
+
+  h2,h3{
+    color:#FF4500;
+  }
+  ul{
+    padding-left:10px;
+  }
+      </style>
+    </head>
+  
+    <body>
+      <!-- navbar -->
+      <nav class="navbar">
+        <div class="logo_item">
+          <img src="logo-no-background.png" alt=""> 
+          <div id="head">
+              <h2>Prejudice Tracker</h2>
+              <p>Detection to correction: fight against prejudice</p>
+          </div>
+        </div>
+  
+        <div class="search_bar">
+          <input type="text" placeholder="Search" />
+        </div>
+  
+        <div class="navbar_content">
+          <a href="educational.html"><button type="button">Learn more</button></a>
+          <img src="person.jpg" alt="" class="profile" />
+        </div>
+      </nav>
+  
+      
+<div class="content clearfix">
+    <div class="main-content">
+        <h1 class="recent-post">RACIAL DISCRIMINATION</h1>
+        <div class="post">
+            <div class="post-preview">
+                <h2>NATIONAL HUMAN RIGHTS COMMISSION, INDIA</h2><br>
+                <p>The NHRC, India was set up on the 12th October, 1993, under the Protection of Human Rights Act, passed by 
+                    Parliament. The mandate of the Commission is to work for the promotion and protection of human rights by spreading 
+                    awareness about them and taking cognizance of complaints of human rights violations.</p><br> 
+ 
+<h4>The denial or impediments, whether in public/private sector, in realization of constitutional rights to 
+    life, liberty, equality, dignity and the issues related to the benefits of Government welfare schemes and policies 
+    become matters of human rights violations for which the NHRC can be approached for remedy. </h4><br>
+<p>The NHRC is a recommendatory quasi-judicial autonomous body, having powers of a civil court. It can call for 
+    any documents and summon any person in a case of human rights violation. Its recommendations in a case of human 
+    rights violation are twofold: relief to the victim and punishment to the guilty. </p><br>
+<h3>Issues on which complaints can be registered with the NHRC</h3><br>
+<p>For not taking lawful action by authorities in police, administration and other government 
+    departments on complaints related to the issues some of which are as follows: <br>
+    1. Unlawful detention, False implication, Custodial violence, Illegal arrest; Other police excesses; <br>
+    2. Encounter deaths, Custodial deaths in police/prison custody, harassment of prisoners <br>
+    3. Harassment of prisoners including their detention beyond the period of their punishment; 
+    Unlivable jail conditions <br>
+    4. Atrocities on SCs and STs and denial of their dues under social welfare schemes including 
+    land pattas<br> 
+    5. Bonded labour; Child labour; Child marriage<br> 
+    6. Dowry death or its attempt; dowry demand, Sexual harassment and indignity to women; 
+    exploitation of women <br>
+    7. Non registration of complaints on denial of care by the kith and kin of older persons, human 
+    trafficking, abduction, sexual assault, murder or attempt thereof, corruption or any such 
+    criminal offence, which is punishable under law <br>
+    8. Inaction on measures or denial thereof to provide basic civic amenities like drinking water, 
+    clean environment, health facilities, communication and transport, Right to Education, ration 
+    under Public Distribution System, Right to Food including Malnutrition and Starvation deaths 
+    and benefits under various social welfare schemes, like MNERGA, ICDS, old age pension, 
+    LGBTI Rights etc. <br>
+    9. Rights of the Disabled and Displacement on account of Mega Projects and Environmental 
+    pollution <br>
+    10. Inaction on complaints on issues, which require preventive action to check unlawful activity, 
+    communal violence, public unrest, law & order situation from deterioration </p><br>
+
+<h3>Who can file a complaint:</h3><br>
+<p>1. Victim or any other person on a victim’s behalf or on his own citing an incident of human rights 
+    violation caused by the inaction, Commission and omission thereof by a public authority. The 
+    Commission can also take suo motu cognizance of any incident of human rights violation on the basis 
+    of media reports <br>
+    Complaints not ordinarily entertained by the NHRC <br>
+    1. Incidents which happened more than a year before the filing of complaint to the NHRC<br> 
+    2. Issues which are sub-judice; i.e. already before a court of law or before any National or State 
+    Commission including a State Human Rights Commission, which are independent of NHRC and not 
+    under it. <br>
+    3. Complaints which are vague, anonymous, pseudonymous or frivolous in nature, wherein no human 
+    rights violation is made out. <br>
+    4. Complaints which pertain to service matters other than pension/family pension, retirement benefits, 
+    denial of wages. <br>
+    5. Complaints which pertain to property and other civil disputes, including matrimonial/family 
+    disputes. <br>
+    
+     </p><br>
+    <h3>Important: </h3><br>
+    <p>The NHRC does not charge any fee for the registration of complaints with it. The complaints, written on a simple piece 
+        of paper with complete contact details of the complainant under his/her name and signature, can be sent directly to 
+        the Commission as follows:<br> 
+        By post at: National Human Rights Commission, Manav Adhikar Bhawan, Block-C, GPO Complex, INA, New Delhi 110023. 
+        The complaint must contain all relevant details of date and place of incident, nature of alleged violation, name of the 
+        public authority, if any, involved.<br> 
+        By Fax (Fax No. 011-24651334)<br> 
+        Online: through NHRC website: www.nhrc.nic.in <br>
+        However, if a complainant takes the services of a Village Level Entrepreneur, VLE operating the Common Service 
+        Centre to write and send the complaint through Common Service Portal, he may require to pay him an assistance fee 
+        of Rs. 30/- only (Inclusive of GST)<br> 
+        
+        The complainants are provided information of the registration and progress on their complaints, including final 
+        disposal on their given address for correspondence. Information is also sent on the mobile number & e-mail ID of the 
+        complainants, if provided by them.</p><br>
+     
+
+</div></div></div></div>
+
+    
+</body>
+</html>

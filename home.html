@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="header">
+    <img src="logo3.png" alt="Logo" class="logo">
+    <div class="name">
+        <h1>Prejudice Tracker</h1>
+        <p>Detection to Correction: Fight against Prejudice</p>
+    </div>
+    
+    <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+      <i class="fa fa-bars"></i>
+    </a>    
+    <div class="navbar" id="myNav">
+      <ul>
+        <li><a class="tabs active-page" href="#"><i class="fa fa-fw fa-home"></i> Home</a> </li>
+        <li><a href="#about"  class="tabs" >About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="login.html" class="tabs"><i class="fa fa-fw fa-user"></i> Login</a></li>
+      </ul>
+    </div>
+    
+  </div>
+
+<!---------------------Banners-------------------------->
+<div class="content">
+  <div id="container">
+      
+    <div class="slideshow-container">  
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 4</div>
+        <img src="slide1.jpg" style="width:100%">
+        
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 4</div>
+        <img src="slide2.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 4</div>
+        <img src="slide3.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="slide4.jpg" style="width:100%">
+      </div>
+    
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <br>
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+    </div>
+    <br>
+  </div></div>
+  <br><br><br>
+  
+
+  <!---------------------about us-------------------------->
+
+  <div id="about">
+    <div id="img">
+      <img src="about.jpg">
+    </div><br><br>
+    <div id="text">
+      <h2> About Prejudice Tracker </h2>
+      <p>Prejudice Tracker is a groundbreaking initiative aimed at monitoring and combating prejudice and discrimination in our communities. Developed by a team of dedicated individuals passionate about social justice, the Prejudice Tracker platform serves as a vital tool in raising awareness, fostering dialogue, and promoting inclusivity.</p>
+      <br>
+      <div class="tabs-links">
+        <p class="links active-link" data-target="Our-Mission">Our Mission</p>
+        <p class="links" data-target="What-we-Do">What we Do</p>
+        <p class="links" data-target="How-You-can-Help">How You can Help</p>
+        <p class="links" data-target="Join-Us">Join Us</p>
+    </div>
+    
+      
+      <div class="contents active-tab" id="Our-Mission">At Prejudice Tracker, our mission is simple yet profound: 
+        to shine a light on prejudice wherever it exists and empower individuals and communities to take meaningful 
+        action against it. We believe that by identifying and confronting prejudice head-on, we can build a more 
+        equitable and compassionate society for all.</div>
+      
+      <div class="contents" id="What-we-Do">Through innovative data collection methods and advanced analytics, Prejudice
+        Tracker gathers and analyzes information on incidents of prejudice and discrimination across various contexts, 
+        including but not limited to race, ethnicity, gender, sexual orientation, religion, and 
+        disability. Our platform aggregates these reports to provide insights into patterns, trends, and hotspots of 
+        prejudice, helping to inform policymakers, educators, activists, and the general public.</div>
+      
+      <div class="contents" id="How-You-can-Help">Prejudice Tracker is a community-driven project, and your participation 
+        is crucial to its success. Whether you've experienced prejudice firsthand or witnessed it in your community,
+        we encourage you to report incidents through our user-friendly interface. By sharing your story, you 
+        contribute to a collective effort to combat prejudice and promote understanding.</div>
+      
+      <div class="contents" id="Join-Us">Together, we can make a difference. Join the Prejudice Tracker community
+        today and be part of the movement to create a more inclusive and equitable world for everyone.</div>
+    </div>
+    
+  </div>
+  <!------------Services----------------->
+  <section class="service_section">
+    <h2>Our Services</h2>
+    <div class="service_container">
+          <div id="services">
+               
+        <div class="row">
+          <div class="col-md-4 ">
+                <!--------------------- Incident Report -------------------------->
+              <div id="report">
+                <div id="Report-Incident">
+                  <h3>Report an Incident</h3>
+                  <p>If you've experienced or witnessed an incident of prejudice or discrimination, we encourage you to report it by clicking on 'Report an Incident' button below.</p>
+                  <p>
+                    Before reporting an incident, gather essential details: time, location, and involved parties. Clearly articulate the incident's impact and potential consequences to ensure a swift and effective response.</p>
+                  <a href="reportingpage.html"><button type="button" >Report an Incident</button></a>
+                </div>
+                </div>
+            
+            </div>
+            <div class="col-md-4 ">
+              <!--------------------- Incident Report -------------------------->
+            <div id="report">
+              <div id="incidenthistory">
+                <h3>View Reported Incidents</h3>
+                <p>Presenting a comprehensive list of previously reported incidents. From minor hiccups to significant disruptions, each is documented for transparency and analysis. Gain valuable insights into past occurrences to inform decision-making and process refinement. Explore diverse scenarios, each offering unique lessons as we pursue operational excellence and resilience.</p>
+                <a href="incidenthistory.html"><button type="button" >View Incident History</button></a>
+              </div>
+              </div>
+          
+          </div>
+          
+          <div class="col-md-4 ">
+             <!---------------------Learning resources -------------------------->
+            <div id="edu-resources">
+              <h3>Empowering Education on Prejudice and Discrimination</h3>
+              <p>At Prejudice Tracker, we believe that education is a powerful tool in combating prejudice and discrimination.
+                 By increasing awareness, understanding, and empathy, we can work together to create a more inclusive and 
+                 equitable society. To support your journey in learning more about these important issues, we've curated a 
+                 selection of educational resources.</p>
+                 <a href="educational.html"><button type="button" class=".btn">View Resources</button></a>
+              </div>
+          </div>
+          <div class="col-md-4 ">
+              <!---------------------User guide -------------------------->
+            <div id="guidance-docs">
+              <h3>Using Prejudice Tracker: A User Guide</h3>
+              <p>Welcome to Prejudice Tracker! This platform is designed to empower you to report and address incidents of 
+                prejudice and discrimination in your community. Whether you've personally experienced prejudice or witnessed 
+                it happening to others, your participation is crucial in creating a more inclusive and just society.</p><br>
+                <br>
+                <a href="docs.html"><button type="button" class=".btn">Get Help</button></a>
+            </div>
+          </div>
+      </div>
+          </div>
+    </div>
+  </section>
+
+  <br>
+  <br>
+
+  <!--------community section--------->
+  <section class="team_section">
+      <div class="heading_container"><br>
+        <h2>
+          Developer <span style="color:brown"> Community</span>
+        </h2>
+      </div>
+
+      <div class="team_container">
+        <div class="row">
+          <div class="box">
+            <div class="img-box">
+              <img src="rakhi.png" class="img1" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Rakhi Kumari
+              </h5>    
+            </div>
+           
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="pooja.jpg" class="img1" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Pooja Meena
+              </h5>              
+            </div>
+            
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="sadhana.jpg" class="img1" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                sadhana
+              </h5>             
+            </div>
+            
+          </div>
+          <div class="box">
+            <div class="img-box">
+              <img src="dharna.jpg" class="img1" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+               Dharna Mittal
+              </h5>            
+            </div></div>
+            <div class="box">
+                <div class="img-box">
+                  <img src="gurleen.png" class="img1" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Gurleen Kaur
+                  </h5>                 
+                </div>
+               
+              </div>
+               
+            </div>        
+            
+          </div>
+    </section>
+ 
+<br><br>
+<footer id="footer">
+
+  <div class="container">
+      <div class="row">
+          <div class="col-md-3">
+              <div class="address">
+                  <h2>Address</h2>
+                  <div class="address-links">
+                      <ul>
+                          <li class="address1"><i class="fa-solid fa-location-dot"></i> National Institute of Technology, Kurukshetra</li>
+                          <li><a href=""><i class="fa fa-phone" style="font-size:20px"></i> +91 90904500112</a></li>
+                          <li><a href=""><i class="fa fa-fw fa-envelope"></i> mail@1234567.com</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="useful-link">
+                  <h2>Quick Links</h2>
+                  <div class="use-links">
+                      <ul>
+                          <li><a href="home.html"><i class="fa fa-fw fa-home" style="font-size:20px;"></i> Home</a></li>
+                          <li><a href="docs.html"><i class="fa fa-fw fa-envelope"></i>User Guide</a></li>
+                          <li><a href="educational.html"><i class="fa fa-fw fa-envelope"></i>Learning Resources</a></li>
+                          <li><a href="reportingpage.html"><i class="fa fa-fw fa-envelope"></i>Report Incident</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="social-links">
+                  <h2>Follow Us</h2>    
+                  <div class="social-icons">
+                      <ul>
+                          <li><a href=""><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                          <li><a href=""><i class="fa fa-instagram"></i> Instagram</a></li>
+                          <li><a href=""><i class="fa fa-linkedin"></i> Linkedin</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          
+          </div>
+      </div>
+      <div class="scroll-top" onclick="scrollToTop()">
+        <i class="fa fa-angle-up"></i>
+      </div>
+      <div class="scroll-bottom" onclick="scrollToBottom()">
+        <i class="fa fa-angle-down"></i>
+      </div>
+  
+</footer>
+
+  <!-- footer copy right section start -->
+  <section id="copy-right">
+      <div class="copy-right-sec">
+          Prejudice Tracker 2024 &copy; By <a href="#">RPSGD </a>| All Rights Reserved. 
+
+
+      </div>
+
+  </section>
+<script src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident History</title>
+    <link rel="stylesheet" href="history.css">
+</head>
+
+<body>
+<div class="sidebar">
+    <div class="filter-header" onclick="toggleFilterOptions()">
+        <span class="filter-symbol">&#9776;</span> Filter 
+    </div>
+<div class="filter-options" id="filterOptions">
+    <button onclick="filterIncident('Racial Discrimination')">Racial Discrimination</button>
+    <button onclick="filterIncident('Gender Bias')">Gender Bias</button>
+    <button onclick="filterIncident('Religious Discrimination')">Religious Discrimination</button>
+    <button onclick="filterIncident('Sexual Orientation')">Sexual Orientation</button>
+    <button onclick="filterIncident('Disability-based prejudice')">Disability-based prejudice</button>
+    <button onclick="filterIncident('Other')">Other</button>
+</div>
+</div>
+<div id="content" class="content">
+</div>
+
+<script src="history.js"></script>
+</body>
+</html>

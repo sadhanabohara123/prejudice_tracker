@@ -1,0 +1,70 @@
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+    
+}
+.filter-header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+.filter-symbol {
+    float: right;
+    transition: transform 0.3s ease;
+}
+.filter-options {
+    display: none;
+    padding: 10px;
+    margin:10px;
+}
+.filter-options button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom:8px;
+    background-color: #222;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+}
+.filter-options button:hover {
+    background: linear-gradient(to right,#50d5ed,rgb(62, 119, 204));
+    box-shadow: 5px 5px 5px 5px #8fe4e7;
+    color:black;
+    border-radius: 40px;
+    margin-right: 20px; 
+}
+.content {
+    display:flex;
+    flex-wrap:wrap;
+    margin-left: 200px;
+}
+.incident-section {
+    flex: 1 0 calc(33.33% - 20px); 
+    margin-bottom: 20px;
+}
+.incident-box {
+    background-color: black;
+    color:white;
+    margin: 20px;
+    padding: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box; 
+    box-shadow: 5px 5px 5px 5px grey;
+    border-radius: 30px;
+}
+.incident-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 4px 8px rgba(88, 88, 88, 0.762);
+    background: linear-gradient(to right,#ed7a50,rgb(203, 81, 81));
+}

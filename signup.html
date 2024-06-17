@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Sign Up</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <style media="screen">
+    *,
+    *:before,
+    *:after {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url("login bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      width: 400px;
+      background-color: rgba(255, 255, 255, 0.13);
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      padding: 30px 35px;
+    }
+
+    .form-container h3 {
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 20px;
+      text-align: center;
+      color: orange;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+
+    input {
+      display: block;
+      height: 50px;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.07);
+      border-radius: 3px;
+      padding: 0 10px;
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: 300;
+      color: #ffffff;
+    }
+
+    ::placeholder {
+      color: #e5e5e5;
+    }
+
+    button {
+      margin-top: 30px;
+      width: 100%;
+      background-color: orange;
+      color: #080710;
+      padding: 15px 0;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .social {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .social div {
+      background: red;
+      width: 150px;
+      border-radius: 3px;
+      padding: 5px 10px 10px 5px;
+      background-color: rgba(255, 255, 255, 0.27);
+      color: #eaf0fb;
+      text-align: center;
+    }
+
+    .social div:hover {
+      background-color: rgb(227, 196, 137);
+    }
+
+    .social i {
+      margin-right: 4px;
+    }
+
+    .signup-success {
+      margin-top: 15px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .dont-have-account {
+      margin-top: 20px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .dont-have-account a {
+      color: orange;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .dont-have-account a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form-container">
+    <h3><img src="logo-no-background.png" width="100" height="100"></h3>
+    <h3>Sign Up</h3>
+    <form onsubmit="return validateForm()">
+      <label for="email">Username</label>
+      <input type="email" placeholder="Email or Phone" id="email" required>
+      <label for="password">Password</label>
+      <input type="password" placeholder="Password" id="password" required>
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" placeholder="Confirm Password" id="confirm-password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+    <div class="signup-success" id="signup-success" style="display: none;">Sign up successful! Welcome!</div>
+    <div class="dont-have-account">Already have an account? <a href="login.html">Log In</a></div>
+  </div>
+
+  <script>
+    function validateForm() {
+      var username = document.getElementById('username').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      var confirmPassword = document.getElementById('confirm-password').value;
+
+      if (username == '' || email == '' || password == '' || confirmPassword == '') {
+        alert('Please fill in all fields.');
+        return false;
+      }
+
+      if (password != confirmPassword) {
+        alert('Passwords do not match.');
+        return false;
+      }
+
+      if (password.length < 8) {
+        alert('Password should be at least 8 characters long.');
+        return false;
+      }
+
+      var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})");
+      if (!strongRegex.test(password)) {
+        alert('Password should contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character.');
+        return false;
+      }
+
+      document.getElementById('signup-success').style.display = 'block';
+      return true;
+    }
+  </script>
+</body>
+
+</html>

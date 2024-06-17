@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <style>
+.content{
+    width:90%;
+    margin: 80px auto 30px;
+    border: 1px solid orangered;
+    margin-top: 100px;
+}
+.content .main-content{
+    width:100%;
+    float: left;
+    border:orangered;
+}
+.content .main-content  .recent-post{
+    margin: 20px;
+}
+.content .main-content .post{
+    width:95%;
+    min-height: 3100px;
+    margin: 10px auto;
+    border-radius: 5px;
+    background: #fff;
+}
+.content.main-content .post .post-image{
+    width: 95%;
+    height: 100%;
+    float: left;
+}
+
+a{
+    text-decoration: none;
+}
+.clearfix::after{
+    content: '';
+    display: block;
+    clear:both;
+}
+h1{
+    color:aliceblue;
+    background-color: #FF4500;
+    font-size: 50px;
+}
+.content .main-content .post .post-preview{
+    width:100%;
+    padding: 10px;
+}
+.btn read-more{
+    padding: .7rem 1rem;
+    background: #FF4500;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    position: absolute;
+}
+.btn:hover{
+    color:#fff !important;
+    background: #FF4500;
+}
+.content .main-content .post{
+    position: relative;
+}
+.content .main-content .post .read-more{
+    position: absolute;
+    bottom: 10px;
+    right:10px;
+    border: 1px solid #FF4500;
+    background: transparent;
+    border-radius: 0px;
+    color: #FF4500 !important;
+}
+.content .main-content .post .read-more:hover{
+    background: #FF4500;
+    color:#fff !important;
+    transition: .25s;
+}
+        /* Import Google font - Poppins */
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  :root {
+    --white-color: #fff;
+    --blue-color: #4070f4;
+    --grey-color: #707070;
+    --grey-color-light: #aaa;
+  }
+  body {
+    background-color: #e7f2fd;
+  
+    transition: all 0.5s ease;
+  }
+
+  
+  /* navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    z-index: 1000;
+    box-shadow: 0 0 2px var(--grey-color-light);
+  }
+  .logo_item {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 22px;
+    font-weight: 500;
+    color:orangered;
+  }
+  
+  .navbar img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+  .logo_item img{
+    width:65px;
+    height:65px;
+  }
+  #head{
+  display:block;
+      
+} 
+#head h2{
+  margin-bottom: 0; 
+  font-size: 25px;
+} 
+#head p{
+  margin-top: 0; 
+  color:black;
+  font-size: 10px;
+} 
+
+  .search_bar {
+    height: 47px;
+    max-width: 430px;
+    width: 100%;
+  }
+  .search_bar input {
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    font-size: 18px;
+    outline: none;
+    background-color: var(--white-color);
+    color: var(--grey-color);
+    border: 1px solid var(--grey-color-light);
+    padding: 0 20px;
+  }
+  .navbar_content {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+  }
+  .navbar_content i {
+    cursor: pointer;
+    font-size: 20px;
+    color:orangered;
+  }
+  .navbar_content button{
+    background: linear-gradient(orangered,pink);
+    box-sizing:border-box;
+    box-shadow:inset 3px 3px 3px 3px rgb(219, 138, 138);
+    padding:10px 20px;
+    color:antiquewhite;
+    font-weight: bold;
+    border-radius: 30px;
+    border:none;
+  }
+  .navbar_content button:hover{
+    background: linear-gradient(rgb(42, 174, 230),rgb(142, 236, 231));
+    box-sizing:border-box;
+    box-shadow:inset 3px 3px 3px 3px rgb(189, 200, 234);
+  }
+  
+
+  @media screen and (max-width: 768px) {
+  
+ 
+    .search_bar {
+      display: none;
+    }
+   
+  }
+
+  h2{
+    color:#FF4500;
+  }
+  ul{
+    padding-left:10px;
+  }
+      </style>
+
+    </head>
+  
+    <body>
+      <!-- navbar -->
+      <nav class="navbar">
+        <div class="logo_item">
+          <img src="logo-no-background.png" alt=""> 
+          <div id="head">
+              <h2>Prejudice Tracker</h2>
+              <p>Detection to correction: fight against prejudice</p>
+          </div>
+        </div>
+  
+        <div class="search_bar">
+          <input type="text" placeholder="Search" />
+        </div>
+  
+        <div class="navbar_content">
+          <a href="educational.html"><button type="button">Learn more</button></a>
+          <img src="person.jpg" alt="" class="profile" />
+        </div>
+      </nav>
+  
+
+<div class="content clearfix">
+    <div class="main-content">
+        <h1 class="recent-post">CYBER CRIME</h1>
+        <div class="post">
+            <div class="post-preview">
+                <h2>What is CSAM ?</h2><br>
+            
+                <p class="preview-text"> 
+                    Child Sexually Abusive Material (CSAM) refers to material containing sexual image in any form, of a child who is abused or sexually exploited. 
+                    Section 67 (B) of IT Act states that “it is punishable for publishing or transmitting of material depicting children in sexually explicit act, etc. in electronic form”.
+</p><br><br>
+<h2>Apart from this portal, are there any alternative ways to remove objectionable content from social media websites?</h2>
+<br><p>Yes, most of the social media website like Facebook, YouTube, Twitter and Instagram etc. have the option of reporting or flagging the objectionable contents. The social media platforms may take appropriate action based on the contents reported to them as per their content policy.</p>
+<br><br><h2>Which type of cybercrimes I can report on the portal?</h2><br>
+<p class="preview-text">There are two options for reporting cybercrimes on the portal:
+    Report Crime related to Women/ Child – Under this section, you can report complaints pertaining to online Child Pornography (CP), Child Sexual Abuse Material (CSAM) or sexually explicit content such as Rape/Gang Rape (CP/RGR) content.
+    Report Other Cybercrimes – Under this option, you can report complaints pertaining to cybercrimes such as mobile crimes, online and social media crimes, online financial frauds, ransomware, hacking, cryptocurrency crimes and online cyber trafficking.
+    </p><br><br>
+    <h2>What kind of information, should I provide to report complaint?
+
+    </h2><br>
+    <p class="preview-text"><b>There are two options for filing a report on www.cybercrime.gov.in:</b> (i) Report Crime related to Women/ Child and (ii) Report Other Cybercrimes. In case of “Report Crime related to Women/ Child”, there are two ways of registering your complaint:</p>
+   <p class="preview-text"></p> <span style="color:blue">Report Anonymously</span> - You can report crimes related to online Child Pornography/ Rape or Gang Rape (CP/RGR) content anonymously. You do not need to provide any personal information. However, information related to the complaint should be accurate and complete for the police authorities to take necessary action.</p>
+   <p class="preview-text">    <span style="color:blue">Report and Track </span>– Under this option, fields marked with a red asterisk (*) are mandatory. It is important that the police authorities receive accurate and complete information related to the complaint. Therefore, you should provide required information such as your name, phone number, email address, details of the complaint and necessary information supporting the complaint.</p> 
+    
+    <p class="preview-text" style="padding-left: 10px;">
+    Initially, register yourself using your name and valid Indian mobile number. You will receive a One Time Password (OTP) on your mobile number. The OTP remains valid for 30 minutes only. Once successfully register your mobile number on the portal, you will be able to report the complaint.
+    You can use “Report Other Cybercrimes” option available on the portal to report other cybercrimes such as mobile crimes, online and social media crimes, online financial frauds, ransomware, hacking, cryptocurrency crimes and online cyber trafficking. You are required to register yourself using your name and valid Indian mobile number. You will receive a One Time Password (OTP) on your mobile number. The OTP remains valid for 30 minutes only. Once successfully register your mobile number on the portal, you will be able to report the complaint by selecting appropriate category and sub- category.
+    
+</p><br><br> 
+<h2>What kind of information, should I provide to report complaint?
+
+</h2>
+<br>
+<p class="preview-text">
+    In case of filing a complaint under “Report Crime related to Women/ Child” section by using “Report Anonymously” option, the victims’ location/ State/ UT where the incident has happened should be selected. If it is a report pertaining to website hosting Child Pornography/ Rape or Gang Rape (CP/RGR) content, complainant may select his/her current State/ UT of resident.
+As a responsible citizen kindly use “Report and Track” option for reporting the crime, since it would help the Law enforcement agencies to contact you for providing further details.
+
+</p>
+<br><br>
+<h2>How can I file the complaints about other cybercrimes?</h2><br>
+<p class="preview-text">In case of other cybercrimes, you can opt for “Report Other Cybercrimes” section. You are required to register yourself using your name and valid Indian mobile number. You will receive a One Time Password (OTP) on your mobile number. The OTP remains valid for 30 minutes only. Once you successfully register your mobile number on the portal, you will be able to report the complaint by selecting appropriate category and sub- category.
+Under this section, fields marked with a red asterisk (*) are mandatory. It is important that the police authorities receive accurate and complete information related to the complaint. Therefore, you should provide required information such as your name, phone number, email address, details of the complaint and necessary information supporting the complaint.</p><br>
+What type of information would be considered as evidence while filing my complaint related to cybercrime?<br>
+<ul class="preview-text">It is important to keep any evidence you may have related to your complaint. Evidence may include:
+<li>Credit card receipt</li>
+<li>Bank statement</li>
+<li>Envelope (if received a letter or item through mail or courier)</li>
+<li>Brochure/Pamphlet</li>
+<li>Online money transfer receipt</li>
+<li>Copy of email</li>
+<li>URL of webpage</li>
+<li>Chat transcripts</li>
+<li>Suspect mobile number screenshot</li>
+<li>Videos</li>
+<li>Images</li>
+<li>Any other kind of document</li></ul><br><br>
+<h2>What action will be taken if complainant reports any false complaint/information?</h2><br>
+<p class="preview-text">Providing false information could make complainant liable to penal action as per the Indian Penal Code.</p><br><br>
+<h2>Can I report a complaint without uploading any information?</h2><br>
+<p class="preview-text">It is recommended that you provide as much information about the complaint as possible so that the police authorities working on the complaint are able to take appropriate and prompt action.</p><br><br>
+<h2>What happens once I report a complaint?</h2><br>
+<p class="preview-text">The complaints reported on the portal shall be handled by the concerned State/UT police authorities based on your selection of State/ UT while reporting the complaint.</p><br><br>
+<h2>Will I be informed that my complaint has been submitted successfully?</h2><br>
+<p class="preview-text">Yes, once your complaint is submitted, you will receive a confirmation message in the portal itself. In case, you have filed a complaint through “Report and Track” option or “Report Other Cybercrime” section available on the portal, you will receive a SMS and an e-mail with a complaint reference number on your registered mobile number and e-mail id.</p><br><br>
+<h2>Can I check the status of my complaint?</h2><br>
+<p class="preview-text">You will be able to check status of your complaint if you have reported the complaint using “Report and Track” option or “Report Other Cybercrime” section available on the portal. The complainant will receive a acknowledgement number which can be used to track the progress of the complaint by logging on the portal and clicking on “check status” option.</p><br><br>
+<h2>Can I withdraw my complaint from the portal?</h2><br>
+<p class="preview-text">A complaint filed under REPORT WOMEN/ CHILD RELATED CRIME section cannot be withdrawn. Complaint filed under REPORT CYBER CRIME section can be withdrawn before it is converted into FIR.</p><br><br>
+<h2>What is Hash value and what is its purpose?</h2><br>
+<p class="preview-text">Hash value is an alpha- numeric value of a fixed length that uniquely identifies data (e.g. 0800fc577294c34e0b28ad2839435945). Hash value acts as a unique fingerprint/ number to a digital file you upload as evidence in the portal (e.g. Images, Videos, Documents etc.,). The hash value that you receive will ensure the integrity of digital evidence uploaded on the portal.</p><br><br>
+<h2>Can I file a complaint if I am an Indian citizen but have been victimized online/ in cyberspace by a foreign national or company?</h2><br>
+<p class="preview-text">Yes, you may file a complaint related to all types of cyber crime on the portal.</p><br><br>
+<h2>Can I file a complaint if I have been victimized online/ in cyberspace by an individual or company in India, but I am not a citizen of India?</h2><br>
+<p class="preview-text">Yes, you can register a complaint on the portal by selecting an appropriate section and option of reporting a complaint pertaining to cybercrime:</p>
+<p class="preview-text">Report Crime related to Women/ Child – Under this section, you can report complaints pertaining to online Child Pornography (CP), Child Sexual Abuse Material (CSAM) or sexually explicit content such as Rape/Gang Rape (CP/RGR) content. There are options to register complaint under this section:</p><br>
+<p class="preview-text">•	Report Anonymously - You can report crimes related to online Child Pornography/ Rape or Gang Rape (CP/RGR) content anonymously. You do not need to provide any personal information. However, information related to the complaint should be accurate and complete for the police authorities to take necessary action.</p><br>
+<p class="preview-text">•	Report and Track – Under this option, kindly register yourself using your name and valid Indian mobile number. You will receive a One Time Password (OTP) on your mobile number. The OTP remains valid for 30 minutes only. Once you successfully register your mobile number on the portal, you will be able to report the complaint.</p><br>
+Report Other Cybercrimes – Under this section, you can report complaints pertaining to cybercrimes such as mobile crimes, online and social media crimes, online financial frauds, ransomware, hacking, cryptocurrency crimes and online cyber trafficking. You are required to register yourself using your name and valid Indian mobile number. You will receive One Time Password (OTP) on your mobile number. The OTP remains valid for 30 minutes only. Once you successfully register your mobile number on the portal, you will be able to report the complaint.
+
+
+</div></div></div></div>
+
+    
+</body>
+</html>

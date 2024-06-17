@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <link rel="stylesheet" type="text/css" href="style6.css">
+    <style>
+        /* Import Google font - Poppins */
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  :root {
+    --white-color: #fff;
+    --blue-color: orange;
+    --grey-color: #707070;
+    --grey-color-light: #aaa;
+  }
+  body {
+    background-color: #e7f2fd;
+  
+    transition: all 0.5s ease;
+    margin-top: 100px;
+  }
+
+  
+ 
+
+  /* navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    z-index: 1000;
+    box-shadow: 0 0 2px var(--grey-color-light);
+  }
+  .logo_item {
+    display: flex;
+    align-items: flex-start; /* Align items to the start (top) */
+    column-gap: 10px;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    color: orangered;
+}
+  .logo-item p{
+    display:block;
+  }
+  
+  .navbar img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+  .logo_item img{
+    width:65px;
+    height:65px;
+  }
+  .navbar_content {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+  }
+  .search_bar {
+    height: 47px;
+    max-width: 430px;
+    width: 100%;
+  }
+  .search_bar input {
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    font-size: 18px;
+    outline: none;
+    background-color: var(--white-color);
+    color: var(--grey-color);
+    border: 1px solid var(--grey-color-light);
+    padding: 0 20px;
+  }
+  .navbar_content {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+  }
+  .navbar_content i {
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--grey-color);
+  }
+  .navbar_content button{
+    background: linear-gradient(orangered,pink);
+    box-sizing:border-box;
+    box-shadow:inset 3px 3px 3px 3px rgb(219, 138, 138);
+    padding:10px 20px;
+    color:antiquewhite;
+    font-weight: bold;
+    border-radius: 30px;
+    border:none;
+  }
+  .navbar_content button:hover{
+    background: linear-gradient(rgb(42, 174, 230),rgb(142, 236, 231));
+    box-sizing:border-box;
+    box-shadow:inset 3px 3px 3px 3px rgb(189, 200, 234);
+    color:black;
+  }
+  #head{
+  display:block;
+      
+} 
+#head h2{
+  margin-bottom: 0; 
+  font-size: 25px;
+} 
+#head p{
+  margin-top: 0; 
+  color:black;
+  font-size: 10px;
+} 
+
+
+  .post{
+    display: flex;
+    margin-top: 10px;
+  }
+  @media screen and (max-width: 768px) {
+    .post{
+      display: block;
+    margin-top: 10px;
+    }
+  }
+  .post-preview{
+    margin-left:40px;
+  }
+  
+  
+
+  
+  @media screen and (max-width: 768px) {
+
+    .search_bar {
+      display: none;
+    }
+    
+  }
+      </style>
+    </head>
+  
+    <body>
+      <!-- navbar -->
+   <!-- navbar -->
+   <nav class="navbar">
+    <div class="logo_item">
+      <img src="logo-no-background.png" alt=""> 
+      <div id="head">
+          <h2>Prejudice Tracker</h2>
+          <p>Detection to correction: fight against prejudice</p>
+      </div>
+    </div>
+    <div class="search_bar">
+        <input type="text" placeholder="Search" />
+      </div>
+
+
+    <div class="navbar_content">
+      <a href="home.html"><button type="button">Home</button></a>
+      <img src="person.jpg" alt="" class="profile" />
+    </div>
+      </nav>
+      
+<div class="content clearfix">
+    <div class="main-content">
+        <h1 class="recent-post">Articles</h1>
+        <div class="post">
+          <a href="https://www.cybercrime.gov.in"> 
+            <img src="cyber_crime.jpeg.jpg" alt="" class="post-image" width="350x" height="300px" hspace="20px" usemap="#cyber"></a>
+           
+            <div class="post-preview">
+                <h2>CYBER CRIME </h2>
+            
+                <p class="preview-text">
+                <h3>National Cyber Crime Reporting Portal</h3> 
+This portal is an initiative of Government of India to facilitate victims/ complainants to report cyber crime complaints online. This portal caters all types of cyber crime complaints including complaints pertaining to online Child Pornography (CP), Child Sexual Abuse Material (CSAM) or sexually explicit content such as Rape/Gang Rape (CP/RGR) content and other cyber crimes such as mobile crimes, online and social media crimes, online financial frauds, ransomware, hacking, cryptocurrency crimes and online cyber trafficking.
+The portal also provides an option of reporting an anonymous complaint for reporting online Child Pornography (CP) or sexually explicit content such as Rape/Gang Rape (RGR) content.
+</p>
+
+
+                <a href="Cyber_crime.html"  class="btn read-more">Read More</a>
+            </div>
+        </div><br><br>
+
+        <div class="post">
+          <a href="https://hrcnet.nic.in/HRCNet/public/Home.aspx">
+            <img src="racial_discrimination.jpeg.jpg" alt="" class="post-image" width="350x" height="300px" hspace="20px" usemap="#racial"></a>
+            
+            <div class="post-preview">
+                <h2>Racial Discrimination</h2>
+
+                <p class="preview-text">
+                    <h3>
+                        NATIONAL HUMAN RIGHTS COMMISSION, INDIA
+                </h3>
+                    The NHRC, India was set up on the 12th October, 1993, under the Protection of Human Rights Act, passed by 
+Parliament. The mandate of the Commission is to work for the promotion and protection of human rights by spreading 
+awareness about them and taking cognizance of complaints of human rights violations. 
+The denial or impediments, whether in public/private sector, in realization of constitutional rights to 
+life, liberty, equality, dignity and the issues related to the benefits of Government welfare schemes and policies 
+become matters of human rights violations for which the NHRC can be approached for remedy. 
+The NHRC is a recommendatory quasi-judicial autonomous body, having powers of a civil court. It can call for 
+any documents and summon any person in a case of human rights violation.  
+                </p>
+                <a href="Racial_discrimination.html" class="btn read-more">Read More</a>
+            </div>
+        </div><br><br>
+        <div class="post">
+          <a href="http://ncw.nic.in/ncw-cells/complaint-investigation-cell">
+            <img src="women_prejudice..jpeg.jpg" alt="" class="post-image"  width="350x" height="300px" hspace="20px" usemap="#women"></a>
+            
+        
+            <div class="post-preview">
+              <h2>Prejudice With Women</h2>
+                <p class="preview-text">
+                  Prejudice against women persists in various forms, causing harm and hindering progress. Discrimination based on gender remains a pervasive issue in many societies worldwide. Women often face unequal treatment in areas such as employment, education, and healthcare. Stereotypes about women's abilities and roles perpetuate bias and limit opportunities. Gender-based violence, including domestic abuse and sexual assault, disproportionately affects women. Access to leadership positions and decision-making roles is often restricted for women. The gender pay gap persists, with women earning less than men for the same work. Societal expectations often pressure women to conform to traditional gender roles, limiting their autonomy and opportunities for self-expression. Intersectional factors, such as race, ethnicity, and socio-economic status, further compound discrimination against women. 
+                </p>
+                <a href="Women_prejudice.html" class="btn read-more">Read More</a>
+            </div>
+        </div><br><br>
+        <div class="post">
+          <a href="https://ccpdcourt.gov.in/efiling">
+            <img src="disability.jpeg.jpg" alt="" class="post-image" width="350x" height="300px" hspace="20px" usemap="#disability">
+            
+              </a>
+          
+            <div class="post-preview">
+                <h2>Disability Based Prejudice</h2>
+  
+                <p class="preview-text">
+                  Disability-based prejudice, also known as ableism, is a pervasive issue that affects millions worldwide. People with disabilities often face discrimination in various aspects of life, including education, employment, and social interactions. Ableism perpetuates harmful stereotypes and misconceptions about the abilities and worth of individuals with disabilities. Limited access to physical environments, transportation, and information further marginalizes people with disabilities. Employment discrimination against individuals with disabilities remains a significant barrier to economic independence and social inclusion. Negative attitudes and assumptions about disability can lead to social exclusion and isolation. Ableism intersects with other forms of discrimination, such as racism, sexism, and classism, further compounding marginalization.   
+                </p>
+                <a href="disability.html" class="btn read-more">Read More</a>
+            <div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

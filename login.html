@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Login</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <style media="screen">
+    *,
+    *:before,
+    *:after {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+
+    body {
+      background-image: url("login bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      width: 400px;
+      background-color: rgba(255, 255, 255, 0.13);
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      padding: 30px 35px;
+    }
+
+    .form-container h3 {
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 20px;
+      text-align: center;
+      color: orange;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+
+    input {
+      display: block;
+      height: 50px;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.07);
+      border-radius: 3px;
+      padding: 0 10px;
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: 300;
+      color: #ffffff;
+    }
+
+    ::placeholder {
+      color: #e5e5e5;
+    }
+
+    button {
+      margin-top: 30px;
+      width: 100%;
+      background-color: orange;
+      color: #080710;
+      padding: 15px 0;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .social {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .social div {
+      background: red;
+      width: 150px;
+      border-radius: 3px;
+      padding: 5px 10px 10px 5px;
+      background-color: rgba(255, 255, 255, 0.27);
+      color: #eaf0fb;
+      text-align: center;
+    }
+
+    .social div:hover {
+      background-color: rgb(227, 196, 137);
+    }
+
+    .social .fb {
+      margin-left: 25px;
+    }
+
+    .social i {
+      margin-right: 4px;
+    }
+
+    .forgot-password,
+    .google-login {
+      text-align: center;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    .forgot-password:hover,
+    .google-login:hover {
+      text-decoration: underline;
+    }
+
+    .dont-have-account {
+      margin-top: 20px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .dont-have-account a {
+      color: orange;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .dont-have-account a:hover {
+      text-decoration: underline;
+    }
+    .forgot-password a {
+      color: rgb(248, 245, 241);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .forgot-password a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form-container">
+    <h3><img src="logo-no-background.png" width="100" height="100"></h3>
+    <h3>Login</h3>
+    <form id="loginForm">
+      <label for="username">Username</label>
+      <input type="text" placeholder="Email or Phone" id="username" required>
+      <label for="password">Password</label>
+      <input type="password" placeholder="Password" id="password" required>
+      <button type="submit">Log In</button>
+    </form>
+    <div class="social">
+      <div class="forgot-password"><a href="forgot pass.html">Forgot password?</a></div>
+      <div class="google-login">Log in with Google</div>
+    </div>
+    <div class="dont-have-account">Don't have an account? <a href="signup.html">Sign Up</a></div>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Check if username and password are filled
+      if (username.trim() === '' || password.trim() === '') {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      // Simulate login success
+      alert('Login successful! Welcome, ' + username + '!');
+    });
+  </script>
+</body>
+
+</html>
+
+
+

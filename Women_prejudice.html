@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <style>
+.content{
+    width:90%;
+    margin: 80px auto 30px;
+    border: 1px solid orangered;
+    margin-top: 100px;
+}
+.content .main-content{
+    width:100%;
+    float: left;
+    border:orangered;
+}
+.content .main-content  .recent-post{
+    margin: 20px;
+}
+.content .main-content .post{
+    width:95%;
+    height: 4000px;
+    margin: 10px auto;
+    border-radius: 5px;
+    background: #fff;
+}
+.content.main-content .post .post-image{
+    width: 95%;
+    height: 100%;
+    float: left;
+}
+
+a{
+    text-decoration: none;
+}
+.clearfix::after{
+    content: '';
+    display: block;
+    clear:both;
+}
+h1{
+    color:aliceblue;
+    background-color: #FF4500;
+    font-size: 50px;
+}
+h3{
+  color:red;
+}
+.content .main-content .post .post-preview{
+    width:100%;
+    padding: 10px;
+}
+.btn read-more{
+    padding: .7rem 1rem;
+    background: #FF4500;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    position: absolute;
+}
+.btn:hover{
+    color:#fff !important;
+    background: #FF4500;
+}
+.content .main-content .post{
+    position: relative;
+}
+.content .main-content .post .read-more{
+    position: absolute;
+    bottom: 10px;
+    right:10px;
+    border: 1px solid #FF4500;
+    background: transparent;
+    border-radius: 0px;
+    color: #FF4500 !important;
+}
+.content .main-content .post .read-more:hover{
+    background: #FF4500;
+    color:#fff !important;
+    transition: .25s;
+}
+        /* Import Google font - Poppins */
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  :root {
+    --white-color: #fff;
+    --blue-color: #4070f4;
+    --grey-color: #707070;
+    --grey-color-light: #aaa;
+  }
+  body {
+    background-color: #e7f2fd;
+  
+    transition: all 0.5s ease;
+  }
+
+  /* navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    z-index: 1000;
+    box-shadow: 0 0 2px var(--grey-color-light);
+  }
+  .logo_item {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 22px;
+    font-weight: 500;
+    color:orangered;
+  }
+  .navbar img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+  .logo_item img{
+    width:65px;
+    height:65px;
+  }
+  #head{
+  display:block;
+      
+} 
+#head h2{
+  margin-bottom: 0; 
+  font-size: 25px;
+} 
+#head p{
+  margin-top: 0; 
+  color:black;
+  font-size: 10px;
+} 
+  .search_bar {
+    height: 47px;
+    max-width: 430px;
+    width: 100%;
+  }
+  .search_bar input {
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    font-size: 18px;
+    outline: none;
+    background-color: var(--white-color);
+    color: var(--grey-color);
+    border: 1px solid var(--grey-color-light);
+    padding: 0 20px;
+  }
+  .navbar_content {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+  }
+  .navbar_content i {
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--grey-color);
+  }
+  .navbar_content button{
+    background: linear-gradient(orangered,pink);
+    box-sizing:border-box;
+    box-shadow:inset 3px 3px 3px 3px rgb(219, 138, 138);
+    padding:10px 20px;
+    color:antiquewhite;
+    font-weight: bold;
+    border-radius: 30px;
+    border:none;
+  }
+  .navbar_content button:hover{
+    background: linear-gradient(rgb(42, 174, 230),rgb(142, 236, 231));
+    box-sizing:border-box;
+    box-shadow:inset 3px 3px 3px 3px rgb(189, 200, 234);
+  }
+  
+
+  @media screen and (max-width: 768px) {
+   
+    .search_bar {
+      display: none;
+    }
+    
+  }
+
+  h2{
+    color:#FF4500;
+  }
+  ul{
+    padding-left:10px;
+  }
+      </style>
+    </head>
+  
+    <body>
+      <!-- navbar -->
+      <nav class="navbar">
+        <div class="logo_item">
+          <img src="logo-no-background.png" alt=""> 
+          <div id="head">
+              <h2>Prejudice Tracker</h2>
+              <p>Detection to correction: fight against prejudice</p>
+          </div>
+        </div>
+  
+        <div class="search_bar">
+          <input type="text" placeholder="Search" />
+        </div>
+  
+        <div class="navbar_content">
+          <a href="educational.html"><button type="button">Learn more</button></a>
+          <img src="person.jpg" alt="" class="profile" />
+        </div>
+      </nav>
+  
+      <script>
+       
+      </script>
+<div class="content clearfix">
+    <div class="main-content">
+        <h1 class="recent-post">WOMEN PREJUDICE</h1>
+        <div class="post">
+            <div class="post-preview" >
+                <h2>The National Commission for Women (Procedure) Regulations, 2005</h2><br> 
+ <h3>PROCEDURE FOR DEALING WITH COMPLAINTS </h3><br>
+ <p>1. General <br>
+    2. Complaints not ordinarily entertainable <br> 
+    3. Receipt and Registration of Complaints <br>
+    4. Scrutiny of complaints <br>
+    5. Placing complaints before the Commission <br>
+    6. Manner of dealing with complaints <br> 
+    7. INQUIRY INTO COMPLAINTS <br> 
+    8. Preliminary consideration, Issue of Notice, etc. <br>
+    9. Procedure for conducting enquiry <br>
+    10. Preliminary hearing of the complaint <br> 
+    11. Summons <br>
+    12. Summons <br> 
+    13. Summons <br> 
+    14. Circumstance for issuance of summons <br> 
+    15. Investigation <br> 
+    16. Powers relating to inquiries <br> 
+    17. Steps after inquiry  <br>
+    18. Recording of Orders / Proceedings <br> 
+    19. Mode of Communication 10 <br>
+    20. Procedure regarding Suo Motu Action 10 </p><br>
+
+
+<h3> General</h3><br>
+<p>The complaint shall disclose complete picture of the matter leading to the 
+    complaint. The Commission may seek further information/affidavit as may be 
+    considered necessary in the matter.</p> <br>
+<h3>Complaints not ordinarily entertainable</h3> <br>
+<p>The Commission may summarily dismiss complaints of the following nature:</p> 
+<p> (i) Complaints illegible or vague, anonymous or pseudonymous; <br>
+  (ii) The issue raised relates to civil dispute, between the parties such as 
+ contractual rights obligations and the like; <br>
+  (iii) The issue raised relates to service matters not involving any 
+ deprivation of women's rights;<br> 
+  (iv) The issue raised relates to labour/industrial disputes not involving any 
+ deprivation of women’s rights;<br> 
+  (v) Matter is sub judice before a Court/Tribunal; <br>
+  (vi) The Commission shall not inquire into any matter which is pending 
+ before a State Commission or any other Commission duly constituted under any 
+ law for the time being in force. <br>
+  (vii) Matter already decided by the Commission<br> 
+  (viii) Matter is outside the purview of the Commission on any other ground; </p><br>
+
+<h3>Receipt and Registration of Complaints</h3><br>
+<p>a. All communications/complaints in writing (by whatsoever mode they 
+  are received) addressed to the Commission, its Chairperson, Members or other 
+  officers of the Commission, either by name or designation, shall be received by 
+  the C&I (complaints and investigation) cell, who shall enter the complaints in the 
+  complaints register containing particulars such as, date of receipt, diary number, 
+  sender's name, address, case number and category and State;<br>
+   
+   b. Such registration of complaint shall be done within 24 hours from the 
+  date of the receipt of the complaint <br>
+   c. An acknowledgement shall be sent to the complainant within 3 days of 
+  the receipt of the complaint <br>
+   d. Without prejudice to the Chairperson's power to set up an Investigating 
+  Committee, complaints on which cognizance has been taken shall be serially 
+  noted and allocated as per roster amongst the members and the counselors 
+  assigned to each case to assist the member in the matter. 
+  </p><br>
+  <h3>Scrutiny of complaints</h3><br>
+  <p>(a) On receipt of the complaint by the Counselor, he/she shall prepare the 
+    BTR/ (Bill Transmission Report) and submit the same to the DS <br>
+     (b) The (BTR) shall be prepared as per the format at Annexure I – BTR 
+    shall disclose the course of action to be adopted in the complaint Such BTR shall 
+    be placed before the DS within 24 hours from the date of receipt of the complaint. 
+    The DS shall decide whether the complaint is cognizable or not and shall forward 
+    the complaint which has been taken cognizance of to the members after getting 
+    full information and reports as necessary. DS will be deemed to be act on behalf 
+    of the Commission for getting full information and reports on behalf of the 
+    Commission. <br>
+    
+     (c) Subject to the provisions above, complaints and other communications 
+    requiring urgent attention shall be placed expeditiously before the member or the 
+    chairperson as the case my be. <br>
+     (d) All complaints and other communications which are not in <br>
+    English/Hindi and which are required to be placed before the Commission shall 
+    be got translated into English/Hindi with utmost expedition. Provided that only 
+    the gist of the complaint shall be prepared in English if the complaint is not 
+    entertainable or is of an urgent nature, requiring immediate attention.<br> 
+     (e) Any complaint directly received by the chairperson or any member 
+    shall be sent to the C&I Cell who shall process the same as per the provisions here 
+    in above provided. <br>
+     (f) In case of any suo moto action taken or proposed to be taken by either 
+    the chairperson or any Member the procedure as described shall be followed.</p> <br>
+   
+<h3> Placing complaints before the Commission</h3><br>
+<p>A brief data of the complaints registered, whether taken cognizance or not 
+  shall be placed before the commission for its information and consideration. 
+  Any member/Member Secretary to whom a complaint is forwarded and on 
+  which cognizance has been taken shall be deemed to act on behalf of the 
+  commission.</p><br>
+ 
+<h3>Manner of dealing with complaints</h3><br>
+<p>Subject to such special or general orders of the Chairperson, all complaints 
+  shall be initially dealt with by a Member of the Commission. However, the 
+  Chairperson may, having regard to the importance of the matter, place the case / 
+  complaint requiring a detailed enquiry before two or more members or a 
+  Committee appointed in this behalf or set up a Investigating Committee for the 
+  said purpose. </p><br> 
+
+<h3>INQUIRY INTO COMPLAINTS</h3><br>
+<p>The Commission while Inquiring into the complaints may- <br>
+  (i) Call for information or report from the Central Government or any 
+ State Government or any other authority or organization subordinate thereto 
+ within such time as may be specified by it: 
+ Provided that if the information or report is not received within the time 
+ stipulated by the Commission, it may proceed to inquire into the complaint on its 
+ own; <br>
+  (ii) If, on receipt of information or report, the Commission is satisfied 
+ either that no further inquiry is required or that the required action has been 
+ initiated or taken by the concerned Government or authority, it may not proceed 
+ with the complaint and inform the complainant accordingly;<br> 
+  (iii) Without prejudice to anything contained in clause (I), if it considers 
+ necessary, having regard to the nature of the complaint, initiate an inquiry.<br> 
+  (iv) Call for further particulars or information from any person or 
+ authority. </p><br>
+
+<h3>Preliminary consideration, Issue of Notice,</h3><br>
+<p>(a) If on consideration of the complaint, the Commission dismisses the 
+  complaint in limine, the said order shall be communicated to the complainant 
+  and the case shall be treated as closed. <br>
+   (b) If on consideration of the complaint along with the BTR, the DS 
+  admits/takes cognizance of the complaint, she may direct issue of notice to any 
+  authority including the complainant, calling upon, to furnish information/ 
+  report, or calling for further particulars .This shall be issued in the form at 
+  ANNEXURE II enclosing a copy of the complaint there to. Such notice shall be 
+  signed by the DS. <br>
+   (c) If, however, the Commission issues any other direction or order, action 
+  shall forthwith be taken accordingly.<br> 
+   (d) If the reports/information is not received from the concerned authority 
+  within the given time, or received late or not complete in all respects, the case 
+  shall be placed before the Member for further direction. </p> <br> 
+ 
+
+<h3>Procedure for conducting enquiry</h3><br> 
+<p>(A) On receipt of information/report called for as per provision of 
+  Regulation 7 or 8 the Chairperson or Member concerned may, if so considered 
+  necessary proceed with the complaint in the manner hereinafter provided. <br>
+   (B) Where no further action is called for, the complaint may be:<br> 
+   (a) Closed, under intimation to the complaint. <br>
+   (b) Complaint may be sent to the appropriate Government/other 
+   authorities for their consideration<br> 
+   (c) May be referred to concerned State Police/State Govt. 
+   Provided that where the action has been taken as (b) (c) above, 
+   the same shall be monitored till the issue/matter has been 
+   decided/settled. <br>
+  ` (C) Where cognizance of the complaint is taken or/on suo-moto action. 
+   - The proceedings in the form of an enquiry may be initiated. 
+   - On suo-moto or any urgent action, the CP may direct setting up 
+   of Investigating Committee U/Sec.8 of Act </p><br>
+ 
+<h3>Preliminary hearing of the complaint</h3><br>
+<p>(a) At the preliminary hearing, the Member shall ascertain from the 
+  complainant whether he/she admits the allegations made by him/her.<br> 
+   (b) Such complainant may be examined on Oath (Annexure-III) or May 
+  file an affidavit supporting the facts of the case or may be directed to produce list 
+  of witnesses/documents proposed to be relied upon, if any, to support her 
+  claim. <br>
+   (c) Thereafter the witnesses on behalf of the complainant shall be 
+  examined and the opposite party shall have the right to cross examine.<br> 
+   (d) The opposite party against whom the complaint has been made would 
+  then be required to submit his written statement of defense either on oath or on 
+  affidavit and produce list of documents/witnesses, if any, relied on.<br> 
+  
+   (e) The committee or any member investigating or inquiring into a 
+  complaint may issue a commission for examination of any witnesses in 
+  accordance with the provisions of the CPC </p><br>
+
+<h3>When a complaint has been filed before the Commission</h3><br>
+<p>Summons (as per ANNEXURE - IV / V') may be issued to the opposite 
+  party/parties to appear & answer the claim on the day to be therein specified.
+</p> <br>
+
+ 
+<h3>The opposite party/parties to whom summons have been issued 
+  may appear in person or by a pleader duly authorized, if so permitted 
+  by the commission, & able to answer all material question relating to 
+  the complaint.</h3> <br>
+<h3>Every summons shall be accompanied by a copy of the complaint 
+  or by a concise statement. Such summons shall be signed by the DS or 
+  the Law Officer.</h3> <br>
+<h3>Circumstance for issuance of summons</h3> <br>
+<p>1. To afford an opportunity of being heard in person and/or to adduce 
+  evidence in support of the complaint.<br> 
+  2. Cause production of the records.<br> 
+  3. Examine as a witness <br>
+  4. To afford an opportunity of being heard as in the opinion of 
+  Commission his/her reputation is likely to be prejudicially affected 
+  by the decision that the Commission may give in the above 
+  proceedings. <br>
+  5. To afford an opportunity of being heard in the matter as your 
+  conduct in connection with subject matter of the above proceedings 
+  is being enquired into. Where the Commission sees reason to 
+  require the personal appearance of the defendants/opposite party, 
+  the summons shall order him to appear in person on the day 
+  therein specified. </p><br>
+
+<h3>Investigation.-</h3><br>
+<p>The Commission may, for the purpose of conducting any investigation 
+  pertaining to the inquiry, utilize the services of any officer of the Central 
+  Government or any State Government with the concurrence of the Central 
+  Government or the State Government, as the case may be or any retired officer or 
+  any other person and co-opt such officer or such person as a Member of the 
+  investigating committee. 
+   </p> <br>
+   <h3>Powers relating to inquiries.-</h3><br>
+   <p>(i) The Commission shall, while inquiring into complaints under this Act, 
+    have all the powers of a civil court trying a suit under the Code of Civil 
+    Procedure, 1908 (5 of 1908), and in particular in respect of the following 
+    matters, namely:- <br>
+     (a) Summoning and enforcing the attendance of witnesses and 
+     examining them on oath; <br>
+     (b) Discovery and production of any document;<br> 
+     (c) Receiving evidence on affidavits; <br>
+     (d) Requisitioning any public record or copy thereof from any 
+     court or office;<br> 
+     (e) Issuing commissions for the examination of witnesses or 
+     documents; <br>
+     (f) Any other matter which may be prescribed.</p> <br>
+   
+ 
+<h3>Steps after inquiry.-</h3><br>
+<p>The Commission may take any of the following steps upon the completion 
+  of an inquiry held under these regulations, namely-
+   (i) where the inquiry discloses, the commission of violation of any rights or 
+  negligence in the prevention of violation of any rights by a public servant, it may 
+  recommend to the concerned Government or authority the initiation of 
+  
+  proceedings for prosecution or such other action as the Commission may deem fit 
+  against the concerned person or persons; <br>
+   (ii) Approach the Supreme Court or the High Court concerned for such 
+  directions, orders or writs as that Court may deem necessary; <br>
+   (iii) Recommend to the concerned Government or authority for the grant 
+  of such immediate relief to the victim or the members of his family as the 
+  Commission may consider necessary; <br>
+   (iv) Subject to the provisions of Sub clause (v) provide a copy of the 
+  inquiry report to the petitioner or her representative;<br> 
+   (v) the Commission shall send a copy of its inquiry report together with it's 
+  recommendations to the concerned Government or authority and the 
+  concerned Government or authority shall, within a period of one month, or such 
+  further time as the Commission may allow, forward its comments on the report, 
+  including the action taken or proposed to be taken thereon, to the 
+  Commission; <br>
+   (vi) The Commission shall publish its inquiry report together with the 
+  comments of the concerned Government or authority, if any, and the action taken 
+  or proposed to be taken by the concerned Government or authority on the 
+  recommendations of the Commission. 
+  Misc provisions</p> <br>
+ 
+<h3>Recording of Orders / Proceedings</h3><br> 
+<p>The order sheet is the mirror to the proceedings and hence the counselor 
+  has to ensure that right from the date of the receipt of the complaint, its enquiry / 
+  investigation till its final disposal, the gist of the proceedings are reflected in the 
+  order sheet and therefore shall ensure that -<br> (a) All orders, notices, summons, 
+  day to day proceedings etc issued in the matter are legibly recorded in the Order 
+  Sheet; provided that the orders which are lengthy shall be recorded on 
+  separate sheets and appended to the order Sheet.<br> 
+  (b) The order sheet shall invariably reflect the brief of the proceedings 
+  conducted which shall be signed by the counselor, member concerned/ 
+  committee and the parties if any.<br> 
+   (c) No routine inter office correspondence or any deposition shall be 
+  recorded in the order sheet. Such correspondence should be made separately in 
+  an annexed file. </p><br>
+ <h3>Mode of Communication</h3><br>
+ <p>Unless otherwise directed, all summons and notices from the Commission 
+  shall be sent by registered post 
+  </p> <br>
+  <h3>Procedure regarding Suo Motu Action. </h3><br>
+    <p>The procedure contained in this Chapter shall mutatis Mutandis apply to 
+      suo moto action taken by the Commission</p>
+ 
+      
+
+         </div></div></div></div>
+
+    
+</body>
+</html>

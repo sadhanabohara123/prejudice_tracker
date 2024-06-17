@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Details</title>
+    <link rel="stylesheet" href="page.css">
+</head>
+<body>
+    <!-- navbar -->
+   <nav class="navbar">
+    <div class="logo_item">
+        <img src="logo-no-background.png" alt=""> <!-- Assuming your image source is correct -->
+        <div id="head">
+            <h2>Prejudice Tracker</h2>
+            <p>Detection to correction: fight against prejudice</p>
+        </div>
+    </div>
+  
+      <div class="navbar_content">
+        
+          <a href="login.html"><button type="button">login</button></a>
+          <img src="person.jpg" alt="person" class="profile" />
+      </div>
+   </nav>
+    <div class="container">
+        <h1>Incident Details</h1>
+        <div id="incidentDetails"></div>
+        <div id="totalSuggestions"></div>
+        <div id="suggestions">
+            <h2>Suggestions</h2>
+            <div id="suggestionsList"></div>
+            <form id="suggestionForm">
+                <textarea id="suggestionInput" placeholder="Write your suggestion here..." required></textarea>
+                <button type="submit">Add Suggestion</button>
+            </form>
+        </div>
+    </div>
+    <script src="page.js"></script>
+</body>
+</html>
